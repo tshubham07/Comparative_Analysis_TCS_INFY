@@ -11,8 +11,8 @@ st.set_page_config(page_title="TCS vs Infosys - Simple Dashboard", layout="wide"
 # Load Data
 @st.cache_data
 def load_data():
-    tcs = pd.read_csv("C:/Users/91797/Downloads/financial_performance_TCS.csv")
-    infosys = pd.read_csv("C:/Users/91797/Downloads/financial_performance_Infosys.csv")
+    tcs = pd.read_csv("financial_performance_TCS.csv")
+    infosys = pd.read_csv("financial_performance_Infosys.csv")
     tcs['Date'] = pd.to_datetime(tcs['Date'])
     infosys['Date'] = pd.to_datetime(infosys['Date'])
     tcs['Year'] = tcs['Date'].dt.year
